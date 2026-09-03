@@ -11,3 +11,8 @@ C-Sharp.sln.DotSettings.user
 bin/
 obj/
 TestResults/
+
+# Jupyter notebooks (outputs and cache)
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+*.ipynb

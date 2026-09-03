@@ -15,3 +15,21 @@ TestResults/
 # Jupyter notebooks (outputs and cache)
 .ipynb_checkpoints/
 notebooks/.ipynb_checkpoints/
+
+# Python virtual environments
+venv/
+env/
+algorithms-env/
+*.venv
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Python distribution
+dist/
+build/
+*.egg-info/
+.eggs/

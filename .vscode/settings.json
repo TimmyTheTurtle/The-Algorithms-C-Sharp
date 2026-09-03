@@ -1,0 +1,9 @@
+{
+  "notebook.backup.enableBackup": false,
+  "notebook.enableCellStatusBar": "visible",
+  "files.hotExit": "off",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": true
+  }
+}

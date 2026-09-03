@@ -152,6 +152,23 @@ dotnet test
 
 Start with **100-level** algorithms to build fundamentals, then progress through **200-level**, **300-level**, and **400-level** as you deepen your understanding. **Specialized** algorithms can be explored at any point based on your interests.
 
+### 🚀 Interactive Learning with LINQPad
+
+To complement your study of these algorithms, the `notebooks/` directory contains interactive **LINQPad** scripts that let you run and modify algorithm implementations in real-time. LINQPad is like Jupyter notebooks, but for C# — write code, see results instantly, and experiment without recompiling.
+
+**Getting Started:**
+1. Download **LINQPad** from [linqpad.net](https://www.linqpad.net) (free version available)
+2. Open any `.linq` file from the `notebooks/` folder
+3. Press `Ctrl+Shift+Enter` to run, modify code and re-run instantly
+4. See algorithm visualizations, test cases, and complexity analysis
+
+**Available Interactive Scripts:**
+- `100-level-numeric.linq` - Factorial, Fibonacci, GCD, primes
+- `100-level-strings.linq` - String operations, palindromes, anagrams
+- `100-level-sorting.linq` - Sorting algorithms with performance comparisons
+
+📖 **More details** in [`notebooks/README.md`](notebooks/README.md) for LINQPad tips, shortcuts, and learning workflows.
+
 ## 📝 Contributing
 
 To add new algorithms:

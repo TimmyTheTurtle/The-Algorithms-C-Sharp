@@ -1,171 +1,175 @@
-# Interactive Algorithm Learning with LINQPad
+# 📓 Interactive Algorithm Learning with Jupyter Notebooks
 
-These `.linq` query files provide an interactive way to explore algorithms using **LINQPad**, the premier C# interactive environment.
+This directory contains **Jupyter notebooks** (.ipynb files) for hands-on algorithm exploration using the **.NET Interactive kernel** and C#.
 
-## 📝 What is LINQPad?
+## Quick Start
 
-**LINQPad** is the gold standard for interactive C# development:
-- Write and execute C# code instantly
-- See results immediately
-- Modify code and re-run without recompiling
-- Works perfectly with local files and classes
-- Free version available (very capable)
-- Still actively maintained and developed
+### 1. Install Prerequisites
 
-## 🚀 Getting Started
+You need three components:
 
-1. **Download LINQPad**
-   - Go to [www.linqpad.net](https://www.linqpad.net)
-   - Download the free version (or Premium for additional features)
-   - Install and launch
+**Option A: VS Code (Recommended)**
+```bash
+# 1. Install .NET SDK (if not already installed)
+# Download from https://dotnet.microsoft.com/download
 
-2. **Install VS Code Extension** (Optional)
-   - Search for "linqpad" in VS Code Extensions
-   - Install `sharwell.linqpad` by Sam Harwell
-   - Allows previewing `.linq` files in VS Code
+# 2. Install Jupyter
+pip install jupyter
 
-3. **Open a Query File**
-   - In LINQPad: File → Open
-   - Navigate to `notebooks/` folder
-   - Open any `.linq` file
-   - Click the "Run" button or press Ctrl+Shift+Enter
+# 3. Install .NET Interactive kernel
+dotnet interactive jupyter install
 
-4. **Start Learning**
-   - Read the markdown comments
-   - Modify the code
-   - Press Ctrl+Shift+Enter to re-run
-   - See output in the "Results" pane
-
-## 📂 Available Query Files
-
-### 100-Level Fundamentals
-- `100-level-numeric.linq` - Factorial, Fibonacci, GCD
-- `100-level-strings.linq` - String operations, palindromes
-- `100-level-sorting.linq` - Bubble sort, basic sorting
-
-### 200-Level Intermediate
-- `200-level-searching.linq` - Binary search, jump search, exponential search
-- `200-level-sorting.linq` - Merge sort, Quick sort, efficient algorithms
-- `200-level-graphs.linq` - BFS, DFS, graph traversal
-
-### 300-Level Advanced
-- `300-level-dp.linq` - Dynamic programming problems
-- `300-level-graphs.linq` - Dijkstra, MST, advanced graph algorithms
-- `300-level-math.linq` - Matrix operations, modular arithmetic
-
-### 400-Level Senior
-- `400-level-advanced.linq` - A* pathfinding, TimSort, production algorithms
-
-### Specialized
-- `specialized-crypto.linq` - Hash functions, padding schemes
-- `specialized-ml.linq` - ML algorithms, regression
-- `specialized-finance.linq` - Financial calculations
-
-## 💡 LINQPad Tips & Tricks
-
-### Basic Commands
-```
-Ctrl+Shift+Enter    Run the query
-Ctrl+E              Execute
-Ctrl+Alt+F5         Run as console application
-.Clear()            Clear the output
-.Dump()             Pretty-print objects to results
-.Dump("Title")      Dump with a title
+# 4. Install VS Code Jupyter extension
+# In VS Code: Ctrl+Shift+X, search "Jupyter", install "Jupyter" by Microsoft
 ```
 
-### Accessing Your Algorithms
-
-You can reference your algorithm files directly:
-
-```csharp
-// Option 1: Load from file
-#load @"..\Algorithms\100-level\Numeric\Factorial.cs"
-
-// Then use it
-var result = Factorial.Calculate(10);
-result.Dump("10! = ");
+**Option B: Jupyter Lab/Notebook (Command-line)**
+```bash
+jupyter notebook     # Opens in browser
+# or
+jupyter lab         # Opens Jupyter Lab in browser
 ```
 
-### Output Formatting
+### 2. Open a Notebook
 
-```csharp
-// Structured output
-new { Number = 10, Factorial = 3628800 }.Dump();
+**In VS Code:**
+- Click on any `.ipynb` file in the Explorer
+- Notebooks open automatically with full Jupyter support
 
-// Formatted tables
-var data = Enumerable.Range(1, 10)
-    .Select(n => new { n, Factorial = CalculateFactorial(n) })
-    .Dump("Factorial Table");
-
-// Time measurements
-using (new StopWatch("My Algorithm"))
-{
-    // Your algorithm here
-}
+**In Browser:**
+```bash
+jupyter notebook notebooks/
 ```
 
-### Common Patterns
+### 3. Run Code Cells
 
-```csharp
-// Test multiple inputs
-new[] { 5, 10, 20 }
-    .Select(n => new { Input = n, Output = MyAlgorithm(n) })
-    .Dump("Results");
+| Action | Shortcut |
+|--------|----------|
+| Execute cell | `Shift + Enter` or `Ctrl + Enter` |
+| Add cell below | `Ctrl + Shift + Enter` |
+| Delete cell | `DD` (in command mode) |
+| Toggle cell type | `Y` (code) or `M` (markdown) |
 
-// Compare two implementations
-void ComparePerformance()
-{
-    var iterations = 1000000;
-    
-    var sw1 = Stopwatch.StartNew();
-    for (int i = 0; i < iterations; i++) Method1();
-    sw1.Stop();
-    
-    var sw2 = Stopwatch.StartNew();
-    for (int i = 0; i < iterations; i++) Method2();
-    sw2.Stop();
-    
-    new { Method1 = sw1.ElapsedMilliseconds, Method2 = sw2.ElapsedMilliseconds }
-        .Dump("Performance Comparison");
-}
-```
+## Available Notebooks
 
-## 📊 Learning Workflow
+### 100-Level (Fundamentals)
+- **100-level-numeric.ipynb** - Factorial, Fibonacci, GCD, primes, modular exponentiation
+- **100-level-strings.ipynb** - Reversal, palindromes, anagrams, character frequency
+- **100-level-sorting.ipynb** - Bubble, selection, insertion, quicksort, mergesort
 
-1. **Start with a level** - Open `100-level-numeric.linq`
-2. **Read the comments** - Understand what each section does
-3. **Run the code** - Press Ctrl+Shift+Enter
-4. **Modify it** - Change parameters and re-run
-5. **Explore** - Try edge cases, add more test data
-6. **Challenge yourself** - Implement your own algorithm in a new cell
+### 200-Level (Coming Soon)
+- Data structures, search algorithms, graph basics
 
-## 🎯 Benefits of LINQPad for Algorithm Learning
+### 300-Level (Coming Soon)
+- Advanced algorithms, dynamic programming
 
-✅ **Instant feedback** - See results immediately  
-✅ **No boilerplate** - Just write code, no Main() needed  
-✅ **Interactive exploration** - Modify and re-run without recompiling  
-✅ **Beautiful output** - Automatic formatting of objects and collections  
-✅ **Performance testing** - Built-in stopwatch and timing  
-✅ **Still maintained** - Active development and support  
-✅ **Free version** - Full features in the free tier  
-
-## 🔗 Resources
-
-- **LINQPad Official**: https://www.linqpad.net
-- **LINQPad Docs**: https://www.linqpad.net/syntax.html
-- **LINQPad Tips**: https://www.linqpad.net/tips.html
-
-## 💪 Challenge Projects
-
-Once comfortable with LINQPad, try:
-
-1. **Algorithm Comparison** - Load multiple sorting algorithms, compare performance
-2. **Visualize Recursion** - Print call stack for recursive algorithms
-3. **Benchmark Suite** - Create a file that benchmarks 10 algorithms
-4. **Interactive Explorer** - Load algorithms and let user choose inputs interactively
-5. **Performance Tuning** - Find the fastest implementation of an algorithm
+### 400-Level (Coming Soon)
+- Complex optimization and specialized domains
 
 ---
 
-**Start with any `.linq` file and run it with Ctrl+Shift+Enter. Happy learning! 🚀**
+## Notebook Structure
+
+Each notebook follows this pattern:
+
+1. **Markdown explanations** - Theory and algorithm overview
+2. **C# code cells** - Full working implementations
+3. **Test examples** - Small example runs
+4. **Performance comparisons** - Timing and complexity analysis
+5. **Challenge problems** - Exercises to deepen understanding
+6. **Learning tips** - Key takeaways and patterns
+
+---
+
+## Tips for Using Notebooks
+
+### Console Output
+```csharp
+Console.WriteLine("Standard output appears below the cell");
+```
+
+### Working with Collections
+```csharp
+var arr = new[] { 1, 2, 3, 4, 5 };
+Console.WriteLine($"Array: [{string.Join(\", \", arr)}]");
+```
+
+### Performance Testing
+```csharp
+var sw = System.Diagnostics.Stopwatch.StartNew();
+// ... your code ...
+sw.Stop();
+Console.WriteLine($"Elapsed: {sw.ElapsedMilliseconds}ms");
+```
+
+### Importing Namespaces
+```csharp
+using System.Linq;  // Available automatically in most notebooks
+```
+
+### Sharing Variables Between Cells
+Variables defined in one cell are accessible in subsequent cells:
+```csharp
+// Cell 1
+var result = 42;
+
+// Cell 2 (can access result)
+Console.WriteLine(result);
+```
+
+---
+
+## Keyboard Shortcuts (VS Code Jupyter)
+
+| Command | Shortcut |
+|---------|----------|
+| Run cell | `Shift + Enter` |
+| Run all cells | `Ctrl + Shift + Alt + Enter` |
+| Run cells above | `Ctrl + Shift + P` then "Run Cells Above" |
+| Run cells below | `Ctrl + Shift + P` then "Run Cells Below" |
+| Interrupt kernel | `Ctrl + I, I` |
+| Restart kernel | `Ctrl + Shift + F10` |
+
+---
+
+## Troubleshooting
+
+### "Kernel not found" error
+```bash
+# Reinstall .NET Interactive kernel
+dotnet interactive jupyter install --force-install
+```
+
+### Cell output missing
+- Try restarting the kernel (`Ctrl + Shift + F10`)
+- Clear all outputs and re-run: `Ctrl + Shift + P` → "Clear All Outputs"
+
+### Performance issues
+- Keep notebook kernels clean: restart after heavy computation
+- Split large notebooks into smaller files
+- Use `.Take(n)` to limit data for testing
+
+---
+
+## Learning Path Recommendations
+
+**Complete the path in this order:**
+1. **100-level-numeric.ipynb** - Get comfortable with syntax and loops (1-2 hours)
+2. **100-level-strings.ipynb** - Practice string manipulation (1-2 hours)
+3. **100-level-sorting.ipynb** - Understand fundamental algorithms (2-3 hours)
+4. **Then proceed to 200-level** - Build on fundamentals
+
+---
+
+## Resources
+
+- [.NET Interactive Documentation](https://github.com/dotnet/interactive)
+- [Jupyter Notebook Documentation](https://jupyter.org/documentation)
+- [C# Fundamentals](https://docs.microsoft.com/en-us/dotnet/csharp/)
+- [Algorithm Complexity Reference](../ALGORITHM_LEARNING_PLAN.md)
+
+---
+
+**Pro Tip:** Use notebooks for active learning. Don't just read—modify the code, break it, fix it. That's where real understanding comes from! 🚀
+
 

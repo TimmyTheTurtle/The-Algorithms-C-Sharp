@@ -206,3 +206,19 @@ See `LLM_AUGMENTATION_CURRICULUM.md` for full learning progression and time esti
 - Include complexity analysis comments in algorithm methods
 - Ensure all tests pass before committing
 - No uncommitted StyleCop violations
+
+## Troubleshooting
+
+### Git: "The upstream branch of your current branch does not match"
+
+**Symptom:** VS Code error dialog saying upstream branch doesn't match
+
+**Cause:** VS Code cached stale merge-base config from an old `master` → `main` branch rename
+
+**Fix:**
+```bash
+git config --local --remove-section branch.main
+git branch -u origin/main main
+```
+
+This is a known recurring issue in this repo. If it happens again, run the above commands.

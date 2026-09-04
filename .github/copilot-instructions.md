@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is an educational repository of algorithms in C# organized by Computer Science curriculum complexity levels (100/200/300/400-level plus specialized). The goal is to implement algorithms clearly with full documentation, comprehensive tests, and optionally educational visualizations (Jupyter notebooks for Python-based exploration).
+This is an educational repository of algorithms in C# organized by Computer Science curriculum complexity levels (100/200/300/400-level plus specialized). The goal is to implement algorithms clearly, correctly, and with strong testing/documentation standards.
 
 ## Project Structure
 
@@ -206,6 +206,32 @@ See `LLM_AUGMENTATION_CURRICULUM.md` for full learning progression and time esti
 - Include complexity analysis comments in algorithm methods
 - Ensure all tests pass before committing
 - No uncommitted StyleCop violations
+
+## Post-Algorithm Deepening Step
+
+After completing work on any algorithm in this repository, always add a short follow-up brainstorming section.
+
+### Goal
+Increase cognitive challenge and depth **without introducing concepts beyond the current working level**.
+
+### Rules
+1. Always include 3–5 follow-up problems tied directly to the algorithm just completed.
+2. Follow-up problems may be more difficult than the original exercise.
+3. Do **not** use concepts, prerequisites, or terminology from levels not yet introduced in the current learning track.
+4. Keep the focus on deeper reasoning within known concepts (edge cases, constraints, optimizations already in-scope, correctness reasoning, testing strategy, and implementation trade-offs that stay in-level).
+5. Label each problem with a short difficulty tag relative to the current level (e.g., "same-level stretch", "same-level advanced").
+
+### Output Template
+After each completed algorithm task, append:
+
+- **Deeper Practice (Same-Level)**
+  - Problem 1 — _difficulty tag_
+  - Problem 2 — _difficulty tag_
+  - Problem 3 — _difficulty tag_
+  - (Optional) Problem 4–5 — _difficulty tag_
+
+### Guardrail
+When unsure whether a concept is beyond the current level, default to excluding it and reframe the problem using only already introduced material.
 
 ## Troubleshooting
 

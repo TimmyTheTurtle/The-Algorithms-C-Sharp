@@ -2,11 +2,13 @@
   "notebook.backup.enableBackup": false,
   "notebook.enableCellStatusBar": "visible",
   "files.hotExit": "off",
+  "editor.inlineSuggest.enabled": false,
+  "github.copilot.nextEditSuggestions.enabled": false,
   "[python]": {
     "editor.defaultFormatter": "ms-python.python",
     "editor.formatOnSave": true
   },
   "github.copilot.enable": {
-    "python": false
+    "*": false
   }
 }

@@ -57,8 +57,10 @@ jupyter notebook notebooks/
 - **100-level-strings.ipynb** - Reversal, palindromes, anagrams, character frequency
 - **100-level-sorting.ipynb** - Bubble, selection, insertion, quicksort, mergesort
 
-### 200-Level (Coming Soon)
-- Data structures, search algorithms, graph basics
+### 200-Level
+- **200-level-data-compression.ipynb** - Burrows-Wheeler transform and Huffman coding
+- **200-level-encoders.ipynb** - Caesar and Vigenere ciphers
+- Additional data structures, search algorithms, and graph basics are coming soon
 
 ### 300-Level (Coming Soon)
 - Advanced algorithms, dynamic programming
@@ -171,5 +173,4 @@ dotnet interactive jupyter install --force-install
 ---
 
 **Pro Tip:** Use notebooks for active learning. Don't just read—modify the code, break it, fix it. That's where real understanding comes from! 🚀
-
 

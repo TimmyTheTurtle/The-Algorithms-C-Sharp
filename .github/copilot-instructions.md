@@ -1,4 +1,6 @@
-# Copilot Instructions for The Algorithms - C#
+# Repository Agent Instructions for The Algorithms - C#
+
+This is the canonical instruction file for repository agents. Copilot reads it from `.github/copilot-instructions.md`; Codex reads the same file through the root `AGENTS.md` symbolic link. Update these instructions only here.
 
 ## Copilot Working Style
 
@@ -225,6 +227,20 @@ See `LLM_AUGMENTATION_CURRICULUM.md` for full learning progression and time esti
 - Environment: `algorithms-env` virtual environment
 - Dependencies: numpy, matplotlib, plotly (managed separately from C# project)
 - Not part of the C# build/test pipeline; used for learning and visualization only
+
+### Learner-Owned Notebook Content
+
+The notebooks are guided exercises. The learner writes the task solutions, explanatory notes, and personal exploration code.
+
+When creating or extending a notebook:
+
+1. Follow the existing 100-level format: topic explanation, algorithm walkthrough, edge cases, complexity, an empty function scaffold, concrete expected outputs, and a challenge problem.
+2. Leave each new solution body for the learner using `# Your code here` and `pass`. Do not provide a completed implementation, partial implementation, helper solution, or a solution-shaped test harness unless the learner explicitly asks for one.
+3. Preserve learner-authored notebook text and code exactly. Do not rewrite, complete, optimize, refactor, remove, or replace it unless the learner explicitly asks to modify that specific content.
+4. Treat executed outputs, execution counts, cell IDs, and kernel metadata as environment-generated notebook data rather than learner answers. Preserve them unless a requested change or a merge resolution requires otherwise.
+5. Keep tests as expected-output prompts that the learner can run after writing a solution. Tests must state the intended behavior without supplying the algorithm.
+
+When helping with an exercise, explain concepts, review the learner's own attempt, or offer hints in increasing detail. Provide the full answer only when explicitly requested.
 
 ## PR/Commit Standards
 

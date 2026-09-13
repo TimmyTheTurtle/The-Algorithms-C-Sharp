@@ -75,11 +75,17 @@ jupyter notebook notebooks/
 Each notebook follows this pattern:
 
 1. **Markdown explanations** - Theory and algorithm overview
-2. **C# code cells** - Full working implementations
-3. **Test examples** - Small example runs
-4. **Performance comparisons** - Timing and complexity analysis
+2. **Algorithm walkthroughs** - Steps, edge cases, and complexity
+3. **Python code scaffolds** - Function signatures with `# Your code here` for the learner to complete
+4. **Expected-output prompts** - Small checks the learner can run after implementing a task
 5. **Challenge problems** - Exercises to deepen understanding
 6. **Learning tips** - Key takeaways and patterns
+
+### Learner-Owned Work
+
+These notebooks are exercises, not answer keys. The learner writes the task solutions, notes, and exploratory code.
+
+When adding a new exercise, provide the explanation, a blank function scaffold, expected behavior, and challenges. Do not prefill solution code or rewrite existing learner-authored cells unless the learner explicitly asks for that help. When reviewing an attempt, prefer concept explanations and incremental hints before offering a complete solution.
 
 ---
 
@@ -173,4 +179,3 @@ dotnet interactive jupyter install --force-install
 ---
 
 **Pro Tip:** Use notebooks for active learning. Don't just read—modify the code, break it, fix it. That's where real understanding comes from! 🚀
-
